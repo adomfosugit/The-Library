@@ -1,0 +1,32 @@
+<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="200" fill="#f8f6f1"/>
+  
+  <!-- Book stack icon -->
+  <g transform="translate(140, 50)">
+    <!-- Bottom book -->
+    <rect x="0" y="60" width="50" height="8" fill="#2c5f4f" rx="1"/>
+    <rect x="2" y="60" width="46" height="6" fill="#3a7a63" rx="1"/>
+    
+    <!-- Middle book -->
+    <rect x="-5" y="50" width="60" height="8" fill="#8b4513" rx="1"/>
+    <rect x="-3" y="50" width="56" height="6" fill="#a0522d" rx="1"/>
+    
+    <!-- Top book -->
+    <rect x="5" y="40" width="40" height="8" fill="#1a3a52" rx="1"/>
+    <rect x="7" y="40" width="36" height="6" fill="#2c5282" rx="1"/>
+    
+    <!-- Book details (pages) -->
+    <line x1="50" y1="62" x2="50" y2="66" stroke="#f8f6f1" stroke-width="0.5"/>
+    <line x1="55" y1="52" x2="55" y2="56" stroke="#f8f6f1" stroke-width="0.5"/>
+    <line x1="45" y1="42" x2="45" y2="46" stroke="#f8f6f1" stroke-width="0.5"/>
+  </g>
+  
+  <!-- Brand name -->
+  <text x="200" y="115" font-family="Georgia, serif" font-size="42" font-weight="300" fill="#1a3a52" text-anchor="middle" letter-spacing="2">
+    THE LIBRARY
+  </text>
+  
+  <!-- Decorative line -->
+  <line x1="90" y1="130" x2="310" y2="130" stroke="#2c5f4f" stroke-width="1" opacity="0.4"/>
+</svg>
