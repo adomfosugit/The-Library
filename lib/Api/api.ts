@@ -104,5 +104,52 @@ export async function fetchProducts() {
   }
   
 
-
+  export async function searchProductsByField(
+    fieldName: string,
+    value: string,
+    matchType: 'exact' | 'partial' = 'partial',
+    limit: number = 10
+  ): Promise<Product[]> {
+    try {
+      const queryParams: any = {
+        content_type: 'product',
+        limit: limit,
+      };
+  
+      // Use [match] operator for partial match, direct field for exact match
+      if (matchType === 'partial') {
+        queryParams[`fields.${fieldName}[match]`] = value;
+      } else {
+        queryParams[`fields.${fieldName}`] = value;
+      }
+  
+      const response = await client.getEntries(queryParams);
+  
+      if (response.items.length === 0) {
+        return [];
+      }
+  
+      return response.items.map((item) => {
+        const fields = item.fields as any;
+  
+        return {
+          id: item.sys.id,
+          slug: fields.slug,
+          name: fields.name,
+          categories: fields.categories || [],
+          price: fields.price,
+          description: fields.description,
+          image: fields.image?.map((img: any) => ({
+            url: `https:${img.fields.file.url}`,
+            alt: img.fields.title || fields.name,
+            width: img.fields.file.details.image?.width,
+            height: img.fields.file.details.image?.height,
+          })) || [],
+        };
+      });
+    } catch (error) {
+      console.error(`Error searching products by ${fieldName}:`, error);
+      return [];
+    }
+  }
   
