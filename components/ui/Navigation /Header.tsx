@@ -23,7 +23,7 @@ const Header = () => {
         href="/"
         className="text-2xl font-bold text-sky-600 hover:opacity-80 cursor-pointer justify-center"
       >
-        THE LIBRARY
+        Bloomforge
       </Link>
 
       {/* Search */}
@@ -75,7 +75,7 @@ const Header = () => {
            <p className="block sm:hidden">{user.firstName}</p>
          </div>
           ) : (
-            <Button className="bg-blue-600 hover:bg-sky-700 px-4 py-2 rounded text-white">
+            <Button className="bg-sky-600 hover:bg-sky-700 px-4 py-2 rounded text-white">
               <SignInButton mode="modal" />
             </Button>
           )}

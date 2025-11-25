@@ -7,48 +7,51 @@ import {
     CardHeader,
     CardTitle,
   } from "@/components/ui/card"
-import { Book } from '@/lib/DummyData'
+import { Product } from '@/lib/DummyData'
 import { Button } from '../ui/button'
 import { ShoppingCart } from 'lucide-react'
 import { useCartStore } from '@/public/Context/StateContext'
+import Link from 'next/link'
+
+
 type Props = {
-    Book : Book
+    Product : Product
 }
-const ProductCard = ({Book}:Props) => {
+const ProductCard = ({Product}:Props) => {
     const addToCart = useCartStore((s) => s.onAdd);
     const qty = useCartStore((s) => s.qty);
     const incQty = useCartStore((s) => s.incQty);
     const decQty = useCartStore((s) => s.decQty);
   return (
     <Card className="w-full max-w-sm rounded-xl shadow-sm hover:shadow-md transition-all">
-    {/* Book Image */}
+    <Link href={`/Products/${Product.slug}`}>
     <div className="w-full h-64 overflow-hidden rounded-t-xl">
       <img
-        src={'/NewBookImages-2024-01-03T121544.742.png'}
-        alt={Book.title}
+        src={`https:${Product.image[0].fields.file.url}`}
+        alt={Product.name}
         className="w-full h-full object-fit"
       />
     </div>
 
     <CardHeader>
       <CardTitle className="text-lg font-semibold">
-        {Book.title}
+        {Product.name}
       </CardTitle>
       <CardDescription className="line-clamp-2 text-sm text-gray-600">
-        {Book.description}
+        {Product.description}
       </CardDescription>
     </CardHeader>
 
     <CardContent className= 'flex justify-between items-center '>
-      <p className="text-xl font-bold">GHS {Book.price}</p>
-      <Button className="1/4 rounded-lg bg-sky-600 hover:bg-sky-700" onClick={() => addToCart(Book, qty)}>
+      <p className="text-xl font-bold">GHS {Product.price}</p>
+      <Button className="1/4 rounded-lg bg-sky-600 hover:bg-sky-700" onClick={() => addToCart(Product, qty)}>
       <ShoppingCart />
       </Button>
     </CardContent>
 
     
      
-
+    </Link>
   </Card>
   )
 }

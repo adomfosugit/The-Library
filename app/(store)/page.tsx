@@ -4,7 +4,9 @@ import Landing from "@/components/ui/Landing/Landing";
 import Trending from "@/components/ui/Landing/Trending";
 import Image from "next/image";
 
-export default function Home() {
+export default async function Home() {
+
+  
   return (
     <div className="">
     
@@ -14,7 +16,7 @@ export default function Home() {
        {/*Shop by Category */}
        <HotSales />
 
-      <Trending />
+     
        
     
     </div>

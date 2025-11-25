@@ -3,39 +3,11 @@ import Categories from './Categories'
 
 const data = [
   {
-    text:'Stationery',
+    text:'Raw Shea Butter',
     image: '/NewBookImages-2024-01-03T121544.742.png'
   },
   {
-    text:'Computer and Technology',
-    image: '/NewBookImages-2024-01-03T121544.742.png'
-  },
-  {
-    text:'For Kids',
-    image: '/NewBookImages-2024-01-03T121544.742.png'
-  },
-  {
-    text:'Junior High School books',
-    image: '/NewBookImages-2024-01-03T121544.742.png'
-  },
-  {
-    text:'Primary School Books',
-    image: '/NewBookImages-2024-01-03T121544.742.png'
-  },
-  {
-    text:'Law, Politics and Social Science',
-    image: '/NewBookImages-2024-01-03T121544.742.png'
-  },
-  {
-    text:'Literature Books',
-    image: '/NewBookImages-2024-01-03T121544.742.png'
-  },
-  {
-    text:'Home Economics',
-    image: '/NewBookImages-2024-01-03T121544.742.png'
-  },
-  {
-    text:'General Science Books',
+    text:'Yellow Shea Butter',
     image: '/NewBookImages-2024-01-03T121544.742.png'
   },
   

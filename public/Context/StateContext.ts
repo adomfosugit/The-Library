@@ -1,5 +1,6 @@
 "use client";
 
+import { Image } from "@/lib/DummyData";
 import { toast } from "sonner";
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
@@ -10,9 +11,9 @@ import { persist } from "zustand/middleware";
 
 export type Product = {
   id: string;
-  title: string;
+  name: string;
   price: number;
-  image?: string;
+  image?: Image[];
 };
 
 export type CartItem = Product & {
@@ -79,7 +80,7 @@ export const useCartStore = create<CartState>()(
           });
         }
 
-        toast(`Product ${product.title} added to cart.`)
+        toast(`Product ${product.name} added to cart.`)
       },
 
       onRemove: (product: Product) => {
