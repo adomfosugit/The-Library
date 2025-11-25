@@ -6,6 +6,7 @@ import Header from "@/components/ui/Navigation /Header";
 import { Toaster } from "@/components/ui/sonner"
 import { SidebarProvider, SidebarTrigger} from "@/components/ui/sidebar"
 import { AppSidebar } from "@/components/Appsidebar";
+import Footer from "@/components/ui/Landing/Footer/Footer";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -44,6 +45,7 @@ export default function RootLayout({
 
         {children}
         
+        <Footer />
         
         </main>
       </body>

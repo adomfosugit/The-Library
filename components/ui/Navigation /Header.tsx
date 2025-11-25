@@ -21,9 +21,9 @@ const Header = () => {
       {/* Logo */}
       <Link
         href="/"
-        className="text-2xl font-bold text-blue-600 hover:opacity-80 cursor-pointer justify-center"
+        className="text-2xl font-bold text-sky-600 hover:opacity-80 cursor-pointer justify-center"
       >
-        <Image src='Logo.svg' alt='Logo' width={100} height={100} />
+        THE LIBRARY
       </Link>
 
       {/* Search */}
