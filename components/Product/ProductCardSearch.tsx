@@ -12,6 +12,7 @@ import { Button } from '../ui/button'
 import { ShoppingCart } from 'lucide-react'
 import { useCartStore } from '@/public/Context/StateContext'
 import Link from 'next/link'
+import Image from 'next/image'
 
 
 type Props = {
@@ -26,7 +27,7 @@ const ProductCard = ({Product}:Props) => {
     <Card className="w-full max-w-sm rounded-xl shadow-sm hover:shadow-md transition-all m-4 mx-auto">
     <Link href={`/Products/${Product.slug}`}>
     <div className="w-full h-64 overflow-hidden rounded-t-xl">
-      <img
+      <Image
         src={Product.image[0].url}
         alt={Product.name}
         className="w-full h-full object-fit"
