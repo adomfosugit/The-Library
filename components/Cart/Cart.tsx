@@ -152,12 +152,12 @@ export default function Cart() {
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <Button
-          className="bg-sky-600 h-12 hover:bg-sky-800 py-2 px-4"
+          className="bg-green-400 h-12 hover:bg-green-400 py-2 px-4"
           variant="outline"
           onClick={() => setOpen(true)}   // ✅ Opens dialog properly
         >
-          <ShoppingCart size={30} className="text-sky-700 w-7 h-7" />
-          <p className="text-sky-700 ml-2">Cart ({totalQuantities})</p>
+          <ShoppingCart size={30} className="text-green-400 w-7 h-7" />
+          <p className="text-green-400 ml-2">Cart ({totalQuantities})</p>
         </Button>
       </DialogTrigger>
 

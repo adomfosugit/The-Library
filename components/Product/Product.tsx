@@ -44,7 +44,7 @@ const ProductCard = ({Product}:Props) => {
 
     <CardContent className= 'flex justify-between items-center '>
       <p className="text-xl font-bold">GHS {Product.price}</p>
-      <Button className="1/4 rounded-lg bg-sky-600 hover:bg-sky-700" onClick={() => addToCart(Product, qty)}>
+      <Button className="1/4 rounded-lg bg-green-400 hover:bg-green-400" onClick={() => addToCart(Product, qty)}>
       <ShoppingCart />
       </Button>
     </CardContent>

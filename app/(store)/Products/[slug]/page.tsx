@@ -68,7 +68,7 @@ export default async function ProductDetailPage({ params }: Props) {
             {/* Product Info */}
             <div className="flex flex-col space-y-6">
               <div>
-                <span className="inline-block px-3 py-1 text-sm font-medium text-blue-600 bg-blue-50 rounded-full mb-4">
+                <span className="inline-block px-3 py-1 text-sm font-medium text-green-400 bg-green-50 rounded-full mb-4">
                   {product.categories}
                 </span>
                 <h1 className="text-4xl font-bold text-gray-900 mb-2">

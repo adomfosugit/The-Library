@@ -22,27 +22,28 @@ const Landing = (props: Props) => {
 <div className="space-y-8 items-center">
 <Badge
   
-  className="bg-blue-700/40 border-sky-700 px-4 py-2 rounded-4xl text-white text-sm font-medium"
+  className="bg-greeb-700/40 border-green-700 px-4 py-2 rounded-4xl text-white text-sm font-medium"
 >
 
 </Badge>
 <h1
   className="text-3xl md:text-4xl lg:text-5xl font-secondary font-bold text-white leading-tight"
 >
-  Discover New Worlds, <br />
-  <span className="inter text-sky-700">One Page at a Time</span>
+  Nourish Your Skin, <br />
+  <span className="inter text-green-500">Naturally & Beautifully</span>
 </h1>
+
 <p
 
 className="text-white/80 text-lg md:text-xl max-w-md">
   <TextType 
                 text={[
-                    "Discover Stories That Stay With You.",
-                    "Every Book Opens a New World.",
-                    "Read More. Learn More. Be More.",
-                    "Your Next Favorite Book Awaits.",
-                    "Where Every Page Sparks Imagination."
-                  ]}
+                  "Natural Beauty Starts With Nature.",
+                  "Pure Shea Butter. Pure Radiance.",
+                  "Nourish Your Skin, Naturally.",
+                  "Where Nature Meets Skincare.",
+                  "Glow From Within, Shine Without."
+                ]}
                 typingSpeed={60} 
                 pauseDuration={1500} 
                 showCursor={true} 
@@ -54,7 +55,7 @@ className="text-white/80 text-lg md:text-xl max-w-md">
   <Button
     asChild
     size="lg"
-    className="bg-sky-700 text-white hover:bg-sky-600/80"
+    className="bg-green-500 text-white hover:bg-green-600/80"
   >
     
     <Link href="/Products">

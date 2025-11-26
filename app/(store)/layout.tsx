@@ -18,8 +18,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "The Library",
-  description: "E-Commerce Book Shop",
+  title: "BloomForge Ventures",
+  description: "She Butter Store -Ghana",
 };
 
 export default function RootLayout({

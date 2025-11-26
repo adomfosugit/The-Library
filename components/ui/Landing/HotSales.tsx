@@ -4,11 +4,11 @@ import Categories from './Categories'
 const data = [
   {
     text:'Raw Shea Butter',
-    image: '/NewBookImages-2024-01-03T121544.742.png'
+    image: '/concept-skin-care-cosmetics-shea-butter-close-up.jpg'
   },
   {
     text:'Yellow Shea Butter',
-    image: '/NewBookImages-2024-01-03T121544.742.png'
+    image: '/concept-skin-care-cosmetics-shea-butter-space-text.jpg'
   },
   
 
@@ -18,7 +18,7 @@ const data = [
 const HotSales = () => {
   return (
     <div className= ' flex flex-col'>
-      <div className='font-bold text-2xl text-white text-center border-b border-2 border-sky-600 py-2 bg-sky-700 '> Shop by Category</div>
+      <div className=' text-2xl text-black text-center border-b border-2 border-green-500 py-2 bg-green-500 '> Shop by Category</div>
       <div >
 
       <Categories item ={data} />
