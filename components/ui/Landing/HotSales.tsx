@@ -7,7 +7,7 @@ const data = [
     image: '/concept-skin-care-cosmetics-shea-butter-close-up.jpg'
   },
   {
-    text:'Yellow Shea Butter',
+    text:'White Shea Butter',
     image: '/concept-skin-care-cosmetics-shea-butter-space-text.jpg'
   },
   

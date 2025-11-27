@@ -195,7 +195,7 @@ export default function Cart() {
                     <div className="flex items-center gap-2 mt-2">
                       <Button
                         size="sm"
-                        className="bg-sky-700 hover:bg-sky-600 h-7 w-7 p-0"
+                        className="bg-green-400 hover:bg-green-400 h-7 w-7 p-0"
                         onClick={() => toggleQty(item.id, "dec")}
                       >
                         -
@@ -205,7 +205,7 @@ export default function Cart() {
                       </span>
                       <Button
                         size="sm"
-                        className="bg-sky-700 hover:bg-sky-600 h-7 w-7 p-0"
+                        className="bg-green-700 hover:bg-green-400 h-7 w-7 p-0"
                         onClick={() => toggleQty(item.id, "inc")}
                       >
                         +
@@ -252,7 +252,7 @@ export default function Cart() {
               </DialogClose>
               <Button
                 type="button"
-                className="bg-sky-600 hover:bg-sky-800"
+                className="bg-green-400 hover:bg-green-400"
                 disabled={cartItems.length === 0 || loading}
                 onClick={() => setShowCheckout(true)}
               >
@@ -315,7 +315,7 @@ export default function Cart() {
               </Button>
               <Button
                 type="button"
-                className="bg-sky-600 hover:bg-sky-700"
+                className="bg-greeb-400 hover:bg-green-400"
                 onClick={handlePayment}
                 disabled={loading}
               >

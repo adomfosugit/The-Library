@@ -29,13 +29,13 @@ export default async function ProductDetailPage({ params }: Props) {
             <div className="space-y-4">
               {product.image.length > 0 ? (
                 <>
-                  <div className="relative aspect-square rounded-lg overflow-hidden bg-gray-100">
+                  <div className="relative h-96 rounded-lg overflow-hidden bg-gray-100">
                     <Image
                     //@ts-ignore
                       src={`${product.image[0].url}`}
                       alt={ product.name}
                       fill
-                      className="object-fit"
+                      className="object-fit "
                       priority
                     />
                   </div>
@@ -71,19 +71,19 @@ export default async function ProductDetailPage({ params }: Props) {
                 <span className="inline-block px-3 py-1 text-sm font-medium text-green-400 bg-green-50 rounded-full mb-4">
                   {product.categories}
                 </span>
-                <h1 className="text-4xl font-bold text-gray-900 mb-2">
+                <h1 className="text-2xl font-bold text-gray-900 mb-1">
                   {product.name}
                 </h1>
-                <p className="text-3xl font-semibold text-gray-900">
+                <p className="text-xl font-semibold text-gray-900">
                   GHS {product.price.toFixed(2)}
                 </p>
               </div>
 
               <div className="border-t border-gray-200 pt-6">
-                <h2 className="text-lg font-semibold text-gray-900 mb-3">
+                <h2 className="text-sm font-semibold text-gray-900 mb-3">
                   Description
                 </h2>
-                <p className="text-gray-600 leading-relaxed whitespace-pre-line">
+                <p className="text-gray-600 leading-relaxed whitespace-pre-line text-sm">
                   {product.description}
                 </p>
               </div>

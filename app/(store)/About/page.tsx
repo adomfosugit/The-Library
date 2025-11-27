@@ -1,0 +1,144 @@
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import React from 'react';
+
+type Props = {}
+
+const Page = (props: Props) => {
+  const testimonials = [
+    {
+      name: "Priscila",
+      role: "Skincare Enthusiast",
+      content: "I've tried many shea butter products, but Bloom Forge Ventures truly delivers on quality. The purity and richness of their shea butter has transformed my skincare routine. My skin has never felt so nourished and healthy!",
+      rating: 5
+    },
+    {
+      name: "Davida",
+      role: "Natural Hair Advocate",
+      content: "As someone who values natural products for my hair care, Bloom Forge Ventures has been a game-changer. Their unrefined shea butter keeps my hair moisturized and strong. Plus, knowing they support local communities makes me feel even better about my purchase.",
+      rating: 5
+    },
+    {
+      name: "Emily ",
+      role: "Wellness Blogger",
+      content: "What sets Bloom Forge Ventures apart is their commitment to authenticity and sustainability. You can feel the difference in their products. It's rare to find a company that genuinely cares about both quality and ethical sourcing.",
+      rating: 5
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <div className="bg-gradient-to-br from-green-50 to-emerald-50 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+              About <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">BloomForge Ventures</span>
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Your trusted source for pure, natural shea butter
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Mission Section */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 border border-gray-100">
+          <div className="flex items-center gap-3 mb-6">
+            <svg className="w-8 h-8 text-green-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M12 2L12 12M12 12L17 7M12 12L7 7" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M12 12C12 12 8 14 8 18C8 20.2091 9.79086 22 12 22C14.2091 22 16 20.2091 16 18C16 14 12 12 12 12Z" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            <h2 className="text-3xl font-bold text-gray-900">Our Story</h2>
+          </div>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            Bloom Forge Ventures is a dedicated company specializing in the sourcing and distribution of raw and natural shea butter. Committed to quality and authenticity, Bloom Forge Ventures ensures that every product is pure, unrefined, and rich in the natural benefits of shea butter. Our mission is to provide customers with premium shea butter that supports healthy skin and hair, while also empowering local communities involved in the shea butter production process. At Bloom Forge Ventures, we believe in sustainability, ethical sourcing, and delivering nature's best to our customers.
+          </p>
+        </div>
+      </div>
+
+      {/* Values Section */}
+      <div className="bg-gray-50 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our Core Values</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Quality & Authenticity</h3>
+              <p className="text-gray-600">We guarantee pure, unrefined shea butter rich in natural benefits for your skin and hair.</p>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Sustainability</h3>
+              <p className="text-gray-600">We practice ethical sourcing and are committed to environmental responsibility in all our operations.</p>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Community Empowerment</h3>
+              <p className="text-gray-600">We support and empower local communities involved in the shea butter production process.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Testimonials Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">What Our Customers Say</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="bg-white p-8 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
+              <div className="flex gap-1 mb-4">
+                {[...Array(testimonial.rating)].map((_, i) => (
+                  <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-gray-700 mb-6 italic">"{testimonial.content}"</p>
+              <div className="border-t border-gray-100 pt-4">
+                <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                <p className="text-sm text-gray-500">{testimonial.role}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="bg-gradient-to-r from-green-400 to-emerald-500 py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Experience Nature's Best
+          </h2>
+          <p className="text-xl text-green-50 mb-8">
+            Join thousands of satisfied customers who trust Bloom Forge Ventures for their natural shea butter needs.
+          </p>
+          <Link href={"/Products"}>
+
+
+          <Button  className="bg-white text-green-500 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors shadow-lg cursor-pointer">
+            Shop Now
+          </Button>
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Page;

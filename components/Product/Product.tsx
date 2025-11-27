@@ -26,11 +26,13 @@ const ProductCard = ({Product}:Props) => {
   return (
     <Card className="w-full max-w-sm rounded-xl shadow-sm hover:shadow-md transition-all">
     <Link href={`/Products/${Product.slug}`}>
-    <div className="w-full h-64 overflow-hidden rounded-t-xl">
+    <div className="w-full h-64 overflow-hidden ">
       <Image
         src={`https:${Product.image[0].fields.file.url}`}
         alt={Product.name}
         className="w-full h-full object-fit"
+        width={100}
+        height={150}
       />
     </div>
 

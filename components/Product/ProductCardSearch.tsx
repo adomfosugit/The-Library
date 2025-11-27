@@ -31,6 +31,8 @@ const ProductCard = ({Product}:Props) => {
         src={Product.image[0].url}
         alt={Product.name}
         className="w-full h-full object-fit"
+        width={100}
+        height={150}
       />
     </div>
 

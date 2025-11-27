@@ -40,7 +40,7 @@ const Footer = (props: Props) => {
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
-                <span>support@bookstore.com</span>
+                <span>info@bloomforge.com.com</span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" />
@@ -53,9 +53,9 @@ const Footer = (props: Props) => {
           <div>
             <h4 className="text-white font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-green-400 transition">About Us</a></li>
+              <li><Link href="About" className="hover:text-green-400 transition">About Us</Link></li>
 
-              <li><a href="#" className="hover:text-green-400 transition">New Products</a></li>
+            
        
               <li><a href="#" className="hover:text-green-400 transition">Contact Us</a></li>
             </ul>
@@ -66,10 +66,10 @@ const Footer = (props: Props) => {
             <h4 className="text-white font-semibold mb-4">Customer Service</h4>
             <ul className="space-y-2 text-sm">
 
-              <li><a href="#" className="hover:text-green-400 transition">Orders</a></li>
-              <li><a href="#" className="hover:text-green-400 transition">Delivery Info</a></li>
-              <li><a href="#" className="hover:text-green-400 transition">Returns & Refunds</a></li>
-              <li><a href="#" className="hover:text-green-400 transition">FAQs</a></li>
+              <li><Link href="/Orders" className="hover:text-green-400 transition">Orders</Link></li>
+              <li><Link href="Deliveryinfo" className="hover:text-green-400 transition">Delivery Info</Link></li>
+              <li><Link href="Returnsrefund" className="hover:text-green-400 transition">Returns & Refunds</Link></li>
+            
             </ul>
           </div>
 
@@ -77,21 +77,21 @@ const Footer = (props: Props) => {
             <div className=" flex flex-col">
                 <div className='flex gap-3'>
 
-              <a href="#" className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
+              <a href="#" className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-600 transition">
                 <Facebook className="w-4 h-4" />
               </a>
-              <a href="#" className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
+              <a href="#" className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-600 transition">
                 <Twitter className="w-4 h-4" />
               </a>
-              <a href="#" className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
+              <a href="#" className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-600 transition">
                 <Instagram className="w-4 h-4" />
               </a>
-              <a href="#" className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
+              <a href="#" className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-600 transition">
                 <Youtube className="w-4 h-4" />
               </a>
                 </div>
                 <div className="border-t border-gray-800 pt-8 mb-8">
-          <h5 className="text-sm font-semibold text-white mb-4">Powered By</h5>
+          <h5 className="text-sm font-semibold text-white mb-4">Payment Secured By</h5>
           <div className="flex items-center">
             <img 
               src="/download.png" 
@@ -113,7 +113,7 @@ const Footer = (props: Props) => {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-          <p>&copy; 2025 The Library. All rights reserved.</p>
+          <p>&copy; 2025 BloomForge Ventures. All rights reserved.</p>
 
     
           <div className="flex gap-6">
