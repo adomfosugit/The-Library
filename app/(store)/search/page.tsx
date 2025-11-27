@@ -1,7 +1,8 @@
 import ProductCard from '@/components/Product/ProductCardSearch'
+import { ProductGridSkeleton } from '@/components/Skeleton/productSkeleton'
 import { searchProductsByField } from '@/lib/Api/api'
 import Link from 'next/link'
-import React from 'react'
+import React, { Suspense } from 'react'
 
 const Searchpage = async({searchParams}:{ searchParams:{
     query: string,
@@ -12,6 +13,7 @@ const Searchpage = async({searchParams}:{ searchParams:{
     console.log(searchProducts)
     
   return (
+     <Suspense fallback={<ProductGridSkeleton />}>
     <div className='max-w-8xl mx-auto px-4 py-8'>
       {searchProducts && searchProducts.length > 0 ? (
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 place-items-center'>
@@ -50,6 +52,7 @@ const Searchpage = async({searchParams}:{ searchParams:{
         </div>
       )}
     </div>
+    </Suspense>
   )
 }
 
