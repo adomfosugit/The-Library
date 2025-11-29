@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useUser } from "@clerk/nextjs";
 import Paystack from "@paystack/inline-js";
 
@@ -21,6 +21,9 @@ import { useCartStore } from "@/public/Context/StateContext";
 import { toast } from "sonner";
 import { createOrder } from "@/lib/Api/managementapi";
 
+// Add your Exchange Rates API key here
+const EXCHANGE_RATES_API_KEY = process.env.NEXT_PUBLIC_EXCHANGE_KEY
+
 export default function Cart() {
   const { user, isSignedIn } = useUser();
 
@@ -32,14 +35,52 @@ export default function Cart() {
   const clearCart = useCartStore((s) => s.clearCart);
 
   const [showCheckout, setShowCheckout] = useState(false);
-  const [open, setOpen] = useState(false);        // ✅ Added controlled dialog
+  const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [convertedAmount, setConvertedAmount] = useState<number | null>(null);
+  const [exchangeRate, setExchangeRate] = useState<number | null>(null);
+  const [convertingCurrency, setConvertingCurrency] = useState(false);
 
   const [shippingDetails, setShippingDetails] = useState({
     Name: "",
     Phone: "",
     Address: "",
   });
+
+  // Fetch exchange rate when checkout is opened
+  useEffect(() => {
+    if (showCheckout && totalPrice > 0) {
+      convertCurrency();
+    }
+  }, [showCheckout, totalPrice]);
+
+  const convertCurrency = async () => {
+    setConvertingCurrency(true);
+    try {
+      const url = `https://v6.exchangerate-api.com/v6/${EXCHANGE_RATES_API_KEY}/pair/USD/GHS`;
+      
+      const response = await fetch(url);
+      const data = await response.json();
+
+      if (data.result === "success" && data.conversion_rate) {
+        const rate = data.conversion_rate;
+        const converted = totalPrice * rate;
+        
+        setConvertedAmount(converted);
+        setExchangeRate(rate);
+      } else {
+        console.error("Currency conversion error:", data);
+        toast.error("Failed to convert currency. Please try again.");
+        setConvertedAmount(null);
+      }
+    } catch (error) {
+      console.error("Currency conversion error:", error);
+      toast.error("Failed to convert currency. Please try again.");
+      setConvertedAmount(null);
+    } finally {
+      setConvertingCurrency(false);
+    }
+  };
 
   const handleInputChange = (e: any) => {
     const { name, value } = e.target;
@@ -62,14 +103,19 @@ export default function Cart() {
       return;
     }
 
-    // ✅ Close checkout section AND dialog completely
+    if (!convertedAmount) {
+      toast.error("Currency conversion failed. Please try again.");
+      return;
+    }
+
     setShowCheckout(false);
     setOpen(false);
 
     setTimeout(() => {
       const paystack = new Paystack();
 
-      const amountIn$ = Math.round(calculateTotal() * 100);
+      // Convert to pesewas (GHS smallest unit: 1 GHS = 100 pesewas)
+      const amountInPesewas = Math.round(convertedAmount * 100);
       const customerEmail = user?.primaryEmailAddress?.emailAddress || "";
 
       const metadata = {
@@ -78,6 +124,16 @@ export default function Cart() {
             display_name: "Customer Name",
             variable_name: "customer_name",
             value: user?.fullName || shippingDetails.Name,
+          },
+          {
+            display_name: "Original Amount (USD)",
+            variable_name: "original_amount_usd",
+            value: `$${totalPrice.toFixed(2)}`,
+          },
+          {
+            display_name: "Exchange Rate",
+            variable_name: "exchange_rate",
+            value: exchangeRate ? exchangeRate.toFixed(4) : "N/A",
           },
           {
             display_name: "Cart Items",
@@ -102,9 +158,9 @@ export default function Cart() {
       paystack.newTransaction({
         key: "pk_test_1156b935d863b0c6d92a19b3678d034562cf062a",
         email: customerEmail,
-        amount: amountIn$,
-        currency: "USD",
-        channels: ["bank_transfer", "card"],
+        amount: amountInPesewas,
+        currency: "GHS",
+        channels: ["bank_transfer", "card", "mobile_money"],
         metadata,
 
         async onSuccess(transaction: any) {
@@ -123,6 +179,9 @@ export default function Cart() {
             status: "processing",
             reference,
             shippingDetails,
+            amountUSD: totalPrice,
+            amountGHS: convertedAmount,
+            exchangeRate: exchangeRate,
           };
 
           try {
@@ -156,7 +215,7 @@ export default function Cart() {
         <Button
           className="bg-primary h-12 hover:bg-primary py-2 px-4"
           variant="outline"
-          onClick={() => setOpen(true)}   // ✅ Opens dialog properly
+          onClick={() => setOpen(true)}
         >
           <ShoppingCart size={30} className="text-primary w-7 h-7" />
           <p className="text-primary ml-2">Cart ({totalQuantities})</p>
@@ -273,13 +332,37 @@ export default function Cart() {
                 <h3 className="font-semibold">Order Summary</h3>
                 <div className="text-sm space-y-1">
                   <div className="flex justify-between">
-                    <span>Subtotal:</span>
+                    <span>Subtotal (USD):</span>
                     <span>$ {totalPrice.toFixed(2)}</span>
                   </div>
 
+                  {convertingCurrency ? (
+                    <div className="flex justify-between text-gray-500">
+                      <span>Converting to GHS...</span>
+                      <span>⏳</span>
+                    </div>
+                  ) : convertedAmount ? (
+                    <>
+                      <div className="flex justify-between text-green-600">
+                        <span>Amount in GHS:</span>
+                        <span>₵ {convertedAmount.toFixed(2)}</span>
+                      </div>
+                      {exchangeRate && (
+                        <div className="flex justify-between text-xs text-gray-500">
+                          <span>Exchange Rate:</span>
+                          <span>1 USD = ₵ {exchangeRate.toFixed(4)}</span>
+                        </div>
+                      )}
+                    </>
+                  ) : null}
+
                   <div className="flex justify-between font-bold pt-2 border-t">
-                    <span>Total:</span>
-                    <span>$ {calculateTotal().toFixed(2)}</span>
+                    <span>You'll Pay:</span>
+                    <span>
+                      {convertedAmount
+                        ? `₵ ${convertedAmount.toFixed(2)}`
+                        : `$ ${calculateTotal().toFixed(2)}`}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -319,9 +402,9 @@ export default function Cart() {
                 type="button"
                 className="bg-primary hover:bg-primary/80"
                 onClick={handlePayment}
-                disabled={loading}
+                disabled={loading || convertingCurrency || !convertedAmount}
               >
-                {loading ? "Processing…" : "Pay with Paystack"}
+                {loading ? "Processing…" : convertingCurrency ? "Converting..." : "Pay with Paystack"}
               </Button>
             </DialogFooter>
           </>
@@ -329,4 +412,4 @@ export default function Cart() {
       </DialogContent>
     </Dialog>
   );
-}  
+}

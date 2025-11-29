@@ -42,7 +42,7 @@ export default function ProductActions( {product} : Props) {
 
       {/* Add to Cart Button */}
       <button
-        className="w-full bg-green-400 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-400 transition-colors"
+        className="w-full bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary transition-colors"
         onClick={() => addToCart(product, qty)}
       >
         Add to Cart

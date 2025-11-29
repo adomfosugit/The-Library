@@ -17,7 +17,7 @@ const Landing = (props: Props) => {
   return (
     <section className="relative hero overflow-hidden py-32 h-full">
     {/* Gradient overlay */}
-<div className="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"></div>
+<div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"></div>
   <div className="container relative z-10 mx-auto px-4">
 <div className="space-y-8 items-center">
 <Badge
@@ -30,7 +30,7 @@ const Landing = (props: Props) => {
   className="text-3xl md:text-4xl lg:text-5xl font-secondary font-bold text-white leading-tight"
 >
   Nourish Your Skin, <br />
-  <span className="inter text-green-500">Naturally & Beautifully</span>
+  <span className="inter text-second">Naturally & Beautifully</span>
 </h1>
 
 <p
@@ -55,7 +55,7 @@ className="text-white/80 text-lg md:text-xl max-w-md">
   <Button
     asChild
     size="lg"
-    className="bg-green-500 text-white hover:bg-green-600/80"
+    className="bg-second text-white hover:bg-second/80"
   >
     
     <Link href="/Products">

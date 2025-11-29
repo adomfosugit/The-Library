@@ -12,7 +12,7 @@
     const paystack = new Paystack();
     
     // prepare fresh metadata and amount
-    const amountInGHS = Math.round(calculateTotal() * 100); // GHS * 100 (as required)
+    const amountIn$ = Math.round(calculateTotal() * 100); // $ * 100 (as required)
     const customerEmail = user?.primaryEmailAddress?.emailAddress || "";
     const metadata = {
       custom_fields: [
@@ -44,7 +44,7 @@
     paystack.newTransaction({
       key: "pk_test_1156b935d863b0c6d92a19b3678d034562cf062a", 
       email: customerEmail,
-      amount: amountInGHS,
+      amount: amountIn$,
       metadata,
 
       // called when payment is successful

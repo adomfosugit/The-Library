@@ -46,8 +46,8 @@ const ProductCard = ({Product}:Props) => {
     </CardHeader>
 
     <CardContent className= 'flex justify-between items-center '>
-      <p className="text-xl font-bold">GHS {Product.price}</p>
-      <Button className="1/4 rounded-lg bg-green-400 hover:bg-green-400" onClick={() => addToCart(Product, qty)}>
+      <p className="text-xl font-bold"> $ {Product.price}</p>
+      <Button className="1/4 rounded-lg bg-primary hover:bg-primary" onClick={() => addToCart(Product, qty)}>
       <ShoppingCart />
       </Button>
     </CardContent>

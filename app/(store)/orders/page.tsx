@@ -67,7 +67,7 @@ const page = async (props: Props) => {
                 {order.cartItem && order.cartItem.map((item: any, index: number) => (
                   <li key={item.id || index} className="flex justify-between text-sm">
                     <span>
-                      {item.product}
+                      {item.name}
                       <span className="text-gray-500"> x{item.quantity}</span>
                     </span>
                   </li>

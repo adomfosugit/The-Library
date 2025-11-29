@@ -14,10 +14,10 @@ const Footer = (props: Props) => {
           <div>
           <Link
   href="/"
-  className="group flex items-center gap-2 text-2xl font-bold text-green-400 hover:text-green-300 transition-all duration-300 cursor-pointer"
+  className="group flex items-center gap-2 text-2xl font-bold text-primary hover:text-primary transition-all duration-300 cursor-pointer"
 >
   <svg 
-    className="w-8 h-8 text-green-400 group-hover:scale-110 transition-transform duration-300" 
+    className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300" 
     viewBox="0 0 24 24" 
     fill="none" 
     stroke="currentColor" 
@@ -26,7 +26,7 @@ const Footer = (props: Props) => {
     <path d="M12 2L12 12M12 12L17 7M12 12L7 7" strokeLinecap="round" strokeLinejoin="round"/>
     <path d="M12 12C12 12 8 14 8 18C8 20.2091 9.79086 22 12 22C14.2091 22 16 20.2091 16 18C16 14 12 12 12 12Z" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
-  <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
+  <span className="bg-gradient-to-r from-primary to-primary-500 bg-clip-text text-transparent">
     Bloomforge
   </span>
 </Link>
@@ -53,11 +53,11 @@ const Footer = (props: Props) => {
           <div>
             <h4 className="text-white font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link href="About" className="hover:text-green-400 transition">About Us</Link></li>
+              <li><Link href="About" className="hover:text-primary transition">About Us</Link></li>
 
             
        
-              <li><a href="#" className="hover:text-green-400 transition">Contact Us</a></li>
+              <li><a href="#" className="hover:text-primary transition">Contact Us</a></li>
             </ul>
           </div>
 
@@ -66,9 +66,9 @@ const Footer = (props: Props) => {
             <h4 className="text-white font-semibold mb-4">Customer Service</h4>
             <ul className="space-y-2 text-sm">
 
-              <li><Link href="/Orders" className="hover:text-green-400 transition">Orders</Link></li>
-              <li><Link href="Deliveryinfo" className="hover:text-green-400 transition">Delivery Info</Link></li>
-              <li><Link href="Returnsrefund" className="hover:text-green-400 transition">Returns & Refunds</Link></li>
+              <li><Link href="/orders" className="hover:text-primary transition">Orders</Link></li>
+              <li><Link href="Deliveryinfo" className="hover:text-primary transition">Delivery Info</Link></li>
+              <li><Link href="Returnsrefund" className="hover:text-primary transition">Returns & Refunds</Link></li>
             
             </ul>
           </div>

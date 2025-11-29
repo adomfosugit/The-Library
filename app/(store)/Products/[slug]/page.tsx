@@ -75,7 +75,7 @@ export default async function ProductDetailPage({ params }: Props) {
                   {product.name}
                 </h1>
                 <p className="text-xl font-semibold text-gray-900">
-                  GHS {product.price.toFixed(2)}
+                  $ {product.price.toFixed(2)}
                 </p>
               </div>
 
