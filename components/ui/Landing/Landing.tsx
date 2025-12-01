@@ -17,12 +17,12 @@ const Landing = (props: Props) => {
   return (
     <section className="relative hero overflow-hidden py-32 h-full">
     {/* Gradient overlay */}
-<div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"></div>
+<div className="absolute inset-0"></div>
   <div className="container relative z-10 mx-auto px-4">
 <div className="space-y-8 items-center">
 <Badge
   
-  className="bg-greeb-700/40 border-green-700 px-4 py-2 rounded-4xl text-white text-sm font-medium"
+  className="bg-primary/40 border-primary px-4 py-2 rounded-4xl text-white text-sm font-medium"
 >
 
 </Badge>

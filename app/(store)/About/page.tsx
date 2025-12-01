@@ -29,27 +29,16 @@ const Page = (props: Props) => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-green-50 to-emerald-50 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              About <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">BloomForge Ventures</span>
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Your trusted source for pure, natural shea butter
-            </p>
-          </div>
-        </div>
+      <div className="bg-gradient-to-br from-black/50 to-emerald-50 hero1 py-20 overflow-hidden">
+       
+        
       </div>
 
       {/* Mission Section */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 border border-gray-100">
           <div className="flex items-center gap-3 mb-6">
-            <svg className="w-8 h-8 text-green-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M12 2L12 12M12 12L17 7M12 12L7 7" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M12 12C12 12 8 14 8 18C8 20.2091 9.79086 22 12 22C14.2091 22 16 20.2091 16 18C16 14 12 12 12 12Z" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
+         
             <h2 className="text-3xl font-bold text-gray-900">Our Story</h2>
           </div>
           <p className="text-lg text-gray-700 leading-relaxed">
@@ -65,7 +54,7 @@ const Page = (props: Props) => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
               <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
@@ -75,7 +64,7 @@ const Page = (props: Props) => {
 
             <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
               <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
@@ -85,7 +74,7 @@ const Page = (props: Props) => {
 
             <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
               <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
@@ -120,7 +109,7 @@ const Page = (props: Props) => {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gradient-to-r from-green-400 to-emerald-500 py-16">
+      <div className="bg-primary py-16 border-b-1 border-second">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Experience Nature's Best
@@ -131,7 +120,7 @@ const Page = (props: Props) => {
           <Link href={"/Products"}>
 
 
-          <Button  className="bg-white text-green-500 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors shadow-lg cursor-pointer">
+          <Button  className="bg-second/80 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors shadow-lg cursor-pointer">
             Shop Now
           </Button>
           </Link>

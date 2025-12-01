@@ -1,3 +1,4 @@
+import About from "@/components/About";
 import { Button } from "@/components/ui/button";
 import HotSales from "@/components/ui/Landing/HotSales";
 import Landing from "@/components/ui/Landing/Landing";
@@ -15,6 +16,7 @@ export default async function Home() {
 
        {/*Shop by Category */}
        <HotSales />
+       <About />
 
      
        

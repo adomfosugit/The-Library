@@ -23,9 +23,10 @@ const Header = () => {
       {/* Logo */}
       <Link
   href="/"
-  className="group flex items-center gap-2 text-2xl font-bold text-green-400 hover:text-green-300 transition-all duration-300 cursor-pointer"
+  className="group flex items-center gap-2 text-2xl font-bold transition-all duration-300 cursor-pointer"
 >
-<BloomForgeLogo className="w-[100px] h-[40px]" />
+<Image src={'/main logo full.png'} className="w-[100px] h-[40px]" alt='logo' height={100} width={100}/>
+
 </Link>
 
       {/* Search */}

@@ -1,35 +1,18 @@
 import React from 'react';
 import { Book, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
 import Link from 'next/link';
+import BloomForgeLogo from '@/components/Logo/BlooforgeLogo';
 
 type Props = {}
 
 const Footer = (props: Props) => {
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="bg-primary text-gray-300">
       <div className="max-w-7xl mx-auto px-4 py-12">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div>
-          <Link
-  href="/"
-  className="group flex items-center gap-2 text-2xl font-bold text-primary hover:text-primary transition-all duration-300 cursor-pointer"
->
-  <svg 
-    className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300" 
-    viewBox="0 0 24 24" 
-    fill="none" 
-    stroke="currentColor" 
-    strokeWidth="2"
-  >
-    <path d="M12 2L12 12M12 12L17 7M12 12L7 7" strokeLinecap="round" strokeLinejoin="round"/>
-    <path d="M12 12C12 12 8 14 8 18C8 20.2091 9.79086 22 12 22C14.2091 22 16 20.2091 16 18C16 14 12 12 12 12Z" strokeLinecap="round" strokeLinejoin="round"/>
-  </svg>
-  <span className="bg-gradient-to-r from-primary to-primary-500 bg-clip-text text-transparent">
-    Bloomforge
-  </span>
-</Link>
 <p className="text-sm mb-4">
   Your trusted source for premium, all-natural shea butter and skincare essentials.
 </p> 
@@ -53,11 +36,11 @@ const Footer = (props: Props) => {
           <div>
             <h4 className="text-white font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link href="About" className="hover:text-primary transition">About Us</Link></li>
+              <li><Link href="About" className="hover:text-secondary transition">About Us</Link></li>
 
             
        
-              <li><a href="#" className="hover:text-primary transition">Contact Us</a></li>
+              <li><a href="#" className="hover:text-secondary transition">Contact Us</a></li>
             </ul>
           </div>
 
@@ -66,9 +49,9 @@ const Footer = (props: Props) => {
             <h4 className="text-white font-semibold mb-4">Customer Service</h4>
             <ul className="space-y-2 text-sm">
 
-              <li><Link href="/orders" className="hover:text-primary transition">Orders</Link></li>
-              <li><Link href="Deliveryinfo" className="hover:text-primary transition">Delivery Info</Link></li>
-              <li><Link href="Returnsrefund" className="hover:text-primary transition">Returns & Refunds</Link></li>
+              <li><Link href="/orders" className="hover:text-secondary transition">Orders</Link></li>
+              <li><Link href="Deliveryinfo" className="hover:text-secondary transition">Delivery Info</Link></li>
+              <li><Link href="Returnsrefund" className="hover:text-secondary transition">Returns & Refunds</Link></li>
             
             </ul>
           </div>
@@ -77,16 +60,16 @@ const Footer = (props: Props) => {
             <div className=" flex flex-col">
                 <div className='flex gap-3'>
 
-              <a href="#" className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-600 transition">
+              <a href="#" className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-secondary transition">
                 <Facebook className="w-4 h-4" />
               </a>
-              <a href="#" className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-600 transition">
+              <a href="#" className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-secondary transition">
                 <Twitter className="w-4 h-4" />
               </a>
-              <a href="#" className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-600 transition">
+              <a href="#" className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-secondary transition">
                 <Instagram className="w-4 h-4" />
               </a>
-              <a href="#" className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-600 transition">
+              <a href="#" className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-secondary transition">
                 <Youtube className="w-4 h-4" />
               </a>
                 </div>
@@ -117,9 +100,9 @@ const Footer = (props: Props) => {
 
     
           <div className="flex gap-6">
-            <a href="#" className="hover:text-green-400 transition">Privacy Policy</a>
-            <a href="#" className="hover:text-green-400 transition">Terms of Service</a>
-            <a href="#" className="hover:text-green-400 transition">Cookie Policy</a>
+            <a href="#" className="hover:text-second transition">Privacy Policy</a>
+            <a href="#" className="hover:text-second transition">Terms of Service</a>
+            <a href="#" className="hover:text-second transition">Cookie Policy</a>
           </div>
         </div>
       
