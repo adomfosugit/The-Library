@@ -19,15 +19,15 @@ const Footer = (props: Props) => {
             <div className="space-y-2 text-sm">
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
-                <span>+233 (55)- XXX-XXXX</span>
+                <span>+233 (54)-872-8456</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
-                <span>info@bloomforge.com.com</span>
+                <span>info@bloomforge.com</span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" />
-                <span>Accra, La XXXXX Street</span>
+                <span>Oxford Avenue, Accra </span>
               </div>
             </div>
           </div>
