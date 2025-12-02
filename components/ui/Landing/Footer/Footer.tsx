@@ -27,7 +27,7 @@ const Footer = (props: Props) => {
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" />
-                <span>Oxford Avenue, Accra </span>
+                <span>Oxford Avenue,TseAddo-Accra </span>
               </div>
             </div>
           </div>
