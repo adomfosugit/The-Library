@@ -1,6 +1,14 @@
+"use client";
+
+import { useLayoutEffect } from "react";
+import { gsap, ScrollTrigger} from "@/lib/gsap";
+
+
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import Image from 'next/image';
 import React from 'react';
+
 
 type Props = {}
 
@@ -27,26 +35,100 @@ const About = (props: Props) => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-br from-black/50 to-emerald-50 hero1 py-20 overflow-hidden">
-       
-        
-      </div>
+    <div className="min-h-screen bg-white/10 overflow-hidden">
+        {/* Updated About and Mission */}
+          <section className="bg-muted/80 relative py-24 lg:py-32 overflow-hidden">
+            <div className="container mx-auto px-6 lg:px-8">
+            <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+              {/* Text Content - Asymmetric positioning */}
+              <div className=" lg:col-span-5 lg:col-start-1 space-y-8">
+                <div className="space-y-4">
+                  <p className="text-second font-medium tracking-widest uppercase text-md">
+                    Our Story
+                  </p>
+                  <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.1] text-foreground">
+                    From Tree
+                    <span className="block text-primary">to Treasure</span>
+                  </h1>
+                </div>
+                  <p className="text-xl text-muted-foreground leading-relaxed">
+                  Bloom Forge Ventures is a dedicated company specializing 
+                  in the sourcing and distribution of raw and natural shea butter. 
+                  Committed to quality and authenticity, Bloom Forge Ventures ensures that every product is pure, 
+                  unrefined, and rich in the natural benefits of shea butter.
+                 </p>
+              </div>
 
-      {/* Mission Section */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 border border-gray-100">
-          <div className="flex items-center gap-3 mb-6">
-         
-            <h2 className="text-3xl font-bold text-gray-900">Our Story</h2>
-          </div>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            Bloom Forge Ventures is a dedicated company specializing in the sourcing and distribution of raw and natural shea butter. Committed to quality and authenticity, Bloom Forge Ventures ensures that every product is pure, unrefined, and rich in the natural benefits of shea butter. Our mission is to provide customers with premium shea butter that supports healthy skin and hair, while also empowering local communities involved in the shea butter production process. At Bloom Forge Ventures, we believe in sustainability, ethical sourcing, and delivering nature's best to our customers.
-          </p>
+  <div className="lg:col-span-7 lg:col-start-6 relative flex justify-end">
+  <div className="relative w-[420px] lg:w-[520px] aspect-[4/3] overflow-hidden rounded-lg shadow-lg">
+    <Image
+      src="/white.jpeg"
+      alt="Beautiful African savanna landscape with shea trees at golden hour"
+      fill
+      className="w-full h-full object-cover"
+    />
+      </div>
+      </div>
+        </div>
+        </div>
+        </section>
+
+ {/* Mission Section */}
+        <section className="bg-muted/40 relative py-24 lg:py-32 overflow-hidden">
+  <div className="container mx-auto px-6 lg:px-8">
+    <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+
+      {/* Image Left */}
+      <div className="lg:col-span-7 lg:col-start-1 relative flex justify-start">
+        <div className="relative w-[420px] lg:w-[520px] aspect-[4/3] overflow-hidden rounded-lg shadow-lg">
+          <Image
+            src="/NEW_product mock up.jpg"  // <-- replace with your mission image
+            alt="Purpose Beyond Production"
+            fill
+            className="object-cover"
+          />
         </div>
       </div>
 
+      {/* Text Right */}
+      <div className="lg:col-span-5 lg:col-start-8 space-y-8">
+        <div className="space-y-4">
+          <p className="text-second font-medium tracking-widest uppercase text-md">
+            Our Mission
+          </p>
+          <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.1] text-foreground">
+            Purpose &
+            <span className="block text-primary">Production</span>
+          </h1>
+        </div>
+
+        <p className="text-xl text-muted-foreground leading-relaxed">
+        Our mission is to provide customers with premium shea butter that supports healthy skin and hair,
+        while also empowering local communities involved in the shea butter production process. 
+        At Bloom Forge Ventures, we believe in sustainability, ethical sourcing, 
+        and delivering nature's best to our customers.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+ {/* Hero Section */}
+   <section className="relative w-full overflow-hidden">
+      <div className="relative w-full aspect-[1800/859] md:aspect-[16/6] lg:aspect-[16/5]">
+        <Image
+          src="/banner 2.jpg"
+          alt="Shea banner image"
+          fill
+          priority
+          className="object-cover"
+        />
+      </div>
+    </section>
+
+
+      
       {/* Values Section */}
       <div className="bg-gray-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -120,7 +202,7 @@ const About = (props: Props) => {
           <Link href={"/Products"}>
 
 
-          <Button  className="bg-second/80 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors shadow-lg cursor-pointer">
+          <Button  className="bg-second/80 text-white px-8 py-3 rounded-lg font-semibold hover:bg-secondary transition-colors shadow-lg cursor-pointer">
             Shop Now
           </Button>
           </Link>
@@ -131,3 +213,4 @@ const About = (props: Props) => {
 }
 
 export default About;
+

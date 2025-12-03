@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import Image from 'next/image';
 import React from 'react';
 
 type Props = {}
@@ -30,9 +31,11 @@ const Page = (props: Props) => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-black/50 to-emerald-50 hero1 py-20 overflow-hidden">
-       
-        
+
       </div>
+
+    
+
 
       {/* Mission Section */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

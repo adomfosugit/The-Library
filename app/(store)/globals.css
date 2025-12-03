@@ -130,13 +130,17 @@
   background-repeat: no-repeat;
   height: 100%;
   }
+
 .hero1 {
   background-image: url('/banner 2.jpg');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  height: 50%;
+  background-repeat: no-repeat;                 
   }
+
+.clip-diagonal {
+  clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 92%);
+}
 
 .dark {
   --sidebar: hsl(240 5.9% 10%);
@@ -148,4 +152,5 @@
   --sidebar-border: hsl(240 3.7% 15.9%);
   --sidebar-ring: hsl(217.2 91.2% 59.8%);
 }
+
 
