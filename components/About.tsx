@@ -51,7 +51,7 @@ const About = (props: Props) => {
                     <span className="block text-primary">to Treasure</span>
                   </h1>
                 </div>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
+                  <p className="text-lg text-muted-foreground">
                   Bloom Forge Ventures is a dedicated company specializing 
                   in the sourcing and distribution of raw and natural shea butter. 
                   Committed to quality and authenticity, Bloom Forge Ventures ensures that every product is pure, 
@@ -82,6 +82,7 @@ const About = (props: Props) => {
         <div className="relative w-[420px] lg:w-[520px] aspect-[4/3] overflow-hidden rounded-lg shadow-lg">
           <Image
             src="/NEW_product mock up.jpg"  
+            alt="Shea butter product mockup with natural elements"
             fill
             className="object-cover"
           />
@@ -100,7 +101,7 @@ const About = (props: Props) => {
           </h1>
         </div>
 
-        <p className="text-lg text-muted-foreground leading-relaxed">
+        <p className="text-lg text-muted-foreground">
         Our mission is to provide customers with premium shea butter that supports healthy skin and hair,
         while also empowering local communities involved in the shea butter production process. 
         At Bloom Forge Ventures, we believe in sustainability, ethical sourcing, 
