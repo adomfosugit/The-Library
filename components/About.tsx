@@ -51,7 +51,7 @@ const About = (props: Props) => {
                     <span className="block text-primary">to Treasure</span>
                   </h1>
                 </div>
-                  <p className="text-xl text-muted-foreground leading-relaxed">
+                  <p className="text-lg text-muted-foreground leading-relaxed">
                   Bloom Forge Ventures is a dedicated company specializing 
                   in the sourcing and distribution of raw and natural shea butter. 
                   Committed to quality and authenticity, Bloom Forge Ventures ensures that every product is pure, 
@@ -74,16 +74,14 @@ const About = (props: Props) => {
         </section>
 
  {/* Mission Section */}
-        <section className="bg-muted/40 relative py-24 lg:py-32 overflow-hidden">
+  <section className="bg-muted/40 relative py-24 lg:py-32 overflow-hidden">
   <div className="container mx-auto px-6 lg:px-8">
     <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-
       {/* Image Left */}
       <div className="lg:col-span-7 lg:col-start-1 relative flex justify-start">
         <div className="relative w-[420px] lg:w-[520px] aspect-[4/3] overflow-hidden rounded-lg shadow-lg">
           <Image
-            src="/NEW_product mock up.jpg"  // <-- replace with your mission image
-            alt="Purpose Beyond Production"
+            src="/NEW_product mock up.jpg"  
             fill
             className="object-cover"
           />
@@ -102,7 +100,7 @@ const About = (props: Props) => {
           </h1>
         </div>
 
-        <p className="text-xl text-muted-foreground leading-relaxed">
+        <p className="text-lg text-muted-foreground leading-relaxed">
         Our mission is to provide customers with premium shea butter that supports healthy skin and hair,
         while also empowering local communities involved in the shea butter production process. 
         At Bloom Forge Ventures, we believe in sustainability, ethical sourcing, 
@@ -114,7 +112,7 @@ const About = (props: Props) => {
   </div>
 </section>
 
- {/* Hero Section */}
+ {/* Banner Section */}
    <section className="relative w-full overflow-hidden">
       <div className="relative w-full aspect-[1800/859] md:aspect-[16/6] lg:aspect-[16/5]">
         <Image
