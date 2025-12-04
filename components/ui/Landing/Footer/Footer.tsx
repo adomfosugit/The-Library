@@ -36,7 +36,7 @@ const Footer = (props: Props) => {
           <div>
             <h4 className="text-white font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link href="About" className="hover:text-secondary transition">About Us</Link></li>
+              <li><Link href="/" className="hover:text-secondary transition">About Us</Link></li>
 
             
        
@@ -50,8 +50,8 @@ const Footer = (props: Props) => {
             <ul className="space-y-2 text-sm">
 
               <li><Link href="/orders" className="hover:text-secondary transition">Orders</Link></li>
-              <li><Link href="Deliveryinfo" className="hover:text-secondary transition">Delivery Info</Link></li>
-              <li><Link href="Returnsrefund" className="hover:text-secondary transition">Returns & Refunds</Link></li>
+              <li><Link href="/" className="hover:text-secondary transition">Delivery Info</Link></li>
+              <li><Link href="/" className="hover:text-secondary transition">Returns & Refunds</Link></li>
             
             </ul>
           </div>

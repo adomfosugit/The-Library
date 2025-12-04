@@ -90,7 +90,7 @@ const About = (props: Props) => {
       </div>
 
       {/* Text Right */}
-      <div className="lg:col-span-5 lg:col-start-8 space-y-8">
+      <div className=" lg:col-span-5 lg:col-start-8 space-y-4">
         <div className="space-y-4">
           <p className="text-second font-medium tracking-widest uppercase text-md">
             Our Mission
@@ -101,7 +101,7 @@ const About = (props: Props) => {
           </h1>
         </div>
 
-        <p className="text-lg text-muted-foreground">
+        <p className="text-sm text-wrap md:text-lg text-muted-foreground p-3 ">
         Our mission is to provide customers with premium shea butter that supports healthy skin and hair,
         while also empowering local communities involved in the shea butter production process. 
         At Bloom Forge Ventures, we believe in sustainability, ethical sourcing, 

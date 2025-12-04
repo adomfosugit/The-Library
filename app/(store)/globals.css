@@ -126,15 +126,35 @@
 .hero {
   background-image: url('/image.png');
   background-size: cover;
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat;
   height: 100%;
-  }
+}
 
+/* Tablet and smaller */
+@media (max-width: 768px) {
+  .hero {
+    background-image: url('/model 2.jpg'); /* Different image for tablets */
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+  .hero {
+    background-image: url('/model 2.jpg'); /* Different image for mobile */
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    min-height: 400px;
+  }
+}
 .hero1 {
   background-image: url('/banner 2.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: right;
   background-repeat: no-repeat;                 
   }
 

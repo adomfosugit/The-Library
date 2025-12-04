@@ -20,7 +20,7 @@ const geistMono = Montserrat({
 
 export const metadata: Metadata = {
   title: "BloomForge Ventures",
-  description: "She Butter Store -Ghana",
+  description: "Shea Butter Store -Ghana",
 };
 
 export default function RootLayout({
