@@ -14,7 +14,7 @@ const Loading = (props: Props) => {
       
       {/* Brand name with gradient */}
       <div className="mt-8 flex flex-col items-center gap-3">
-        <span className="text-4xl font-bold bg-gradient-to-r from-primary to-green-600 bg-clip-text text-transparent animate-pulse">
+        <span className="font-serif text-4xl font-bold bg-gradient-to-r from-primary to-green-600 bg-clip-text text-transparent animate-pulse">
           Bloomforge
         </span>
         

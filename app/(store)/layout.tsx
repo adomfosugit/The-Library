@@ -8,12 +8,12 @@ import { SidebarProvider, SidebarTrigger} from "@/components/ui/sidebar"
 import { AppSidebar } from "@/components/Appsidebar";
 import Footer from "@/components/ui/Landing/Footer/Footer";
 
-const geistSans = DM_Sans({
-  variable: "--font-geist-sans",
+const fontprimary = DM_Sans({
+  variable: "--font-primary",
   subsets: ["latin"],
 });
 
-const geistMono = Montserrat({
+const fontsecondary = Montserrat({
   variable: "--font-secondary",
   subsets: ["latin"],
 });
@@ -32,7 +32,7 @@ export default function RootLayout({
     <ClerkProvider dynamic >
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${fontprimary.variable} ${fontsecondary.variable} antialiased`}
       >
         <main>
         <Header />
