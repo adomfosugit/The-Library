@@ -24,8 +24,8 @@ const Landing = (props: Props) => {
 <h1
   className="text-3xl md:text-4xl lg:text-5xl font-secondary font-bold text-white leading-tight"
 >
-  Nourish Your Skin, <br />
-  <span className="inter text-second">Naturally & Beautifully</span>
+  Naturally & Beautifully  <br />
+  <span className="inter text-second">made shea butter</span>
 </h1>
 
 <p
