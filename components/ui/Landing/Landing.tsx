@@ -20,12 +20,7 @@ const Landing = (props: Props) => {
 <div className="absolute inset-0"></div>
   <div className="container relative z-10 mx-auto px-4">
 <div className="space-y-8 items-center">
-<Badge
-  
-  className="bg-primary/40 border-primary px-4 py-2 rounded-4xl text-white text-sm font-medium"
->
 
-</Badge>
 <h1
   className="text-3xl md:text-4xl lg:text-5xl font-secondary font-bold text-white leading-tight"
 >
