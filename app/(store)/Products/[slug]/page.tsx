@@ -35,7 +35,7 @@ export default async function ProductDetailPage({ params }: Props) {
                       src={`${product.image[0].url}`}
                       alt={ product.name}
                       fill
-                      className="object-fit "
+                      className="object-cover"
                       priority
                     />
                   </div>
