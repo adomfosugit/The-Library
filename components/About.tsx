@@ -339,7 +339,7 @@ const About = (props: Props) => {
       <div className="lg:col-span-7 lg:col-start-1 relative flex justify-center lg:justify-start order-2 lg:order-1 animate-fade-up">
         <div className="relative w-full max-w-[420px] lg:max-w-[520px] aspect-[4/3] overflow-hidden rounded-lg shadow-lg">
           <Image
-            src="/NEW_product mock up.jpg"  
+            src="/yellow.jpeg"  
             alt="Shea butter product mockup with natural elements"
             fill
             className="object-cover"
