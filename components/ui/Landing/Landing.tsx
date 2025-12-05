@@ -48,6 +48,12 @@ const Landing = () => {
             className="absolute inset-0 hidden md:block bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${slide.image})` }}
           />
+
+        {/* Tablet Image */}
+          <div
+            className="absolute inset-0 hidden md:block lg:hidden bg-cover bg-right bg-no-repeat h-full w-full"
+            style={{ backgroundImage: `url(${slide.image})` }}
+          />
           {/* Mobile/Tablet Image */}
           <div
             className="absolute inset-0 h-full min-h-screen md:hidden bg-cover bg-center bg-no-repeat"

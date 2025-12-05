@@ -51,7 +51,7 @@ const Footer = (props: Props) => {
 
               <li><Link href="/orders" className="hover:text-secondary transition">Orders</Link></li>
               <li><Link href="/" className="hover:text-secondary transition">Delivery Info</Link></li>
-              <li><Link href="/" className="hover:text-secondary transition">Returns & Refunds</Link></li>
+            
             
             </ul>
           </div>
