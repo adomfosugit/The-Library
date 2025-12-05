@@ -12,16 +12,16 @@ const Landing = () => {
 
   const slides = [
     {
-      image: '/image.png',
-      mobileImage: '/model.jpg'
+      image: '/Banner.jpg',
+      mobileImage: '/Media.jpg'
     },
     {
-      image: '/image.png', 
-      mobileImage: '/image.png'
+      image: '/Banner.jpg', 
+      mobileImage: '/Media.jpg'
     },
     {
-      image: '/image.png', 
-      mobileImage: '/image.png'
+      image: '/Banner.jpg', 
+      mobileImage: '/Media.jpg'
     }
   ]
 
