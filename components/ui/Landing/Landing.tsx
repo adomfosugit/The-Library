@@ -62,7 +62,7 @@ const Landing = () => {
       {/* Content */}
       <div className="container relative z-10 mx-auto px-4 h-full flex items-center">
         <div className="space-y-8 max-w-3xl">
-          <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-white leading-tight">
+          <h1 className="text-3xl tracking-tighter md:text-4xl lg:text-6xl font-bold text-white leading-tight">
             Naturally & Beautifully <br />
             <span className="text-second">made shea butter</span>
           </h1>
@@ -91,7 +91,7 @@ const Landing = () => {
               className="bg-second text-white hover:bg-second/80"
             >
               <Link href="/Products" className="flex items-center">
-                Shop Now <ArrowRight className="ml-2 h-4 w-4" />
+                Shop Our Products Now <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
           </div>

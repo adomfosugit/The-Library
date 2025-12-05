@@ -114,6 +114,15 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+p {
+  font-family: var(--font-primary), sans-serif;
+} 
+
+ h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-secondary), sans-serif;
+}
+
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -171,6 +180,53 @@
   --sidebar-accent-foreground: hsl(240 4.8% 95.9%);
   --sidebar-border: hsl(240 3.7% 15.9%);
   --sidebar-ring: hsl(217.2 91.2% 59.8%);
+}
+
+/* Entrance helper */
+.animate-fade-up {
+  will-change: transform, opacity;
+}
+
+/* subtle hover zoom used on images/cards/buttons */
+.subtle-zoom {
+  transition: transform 420ms cubic-bezier(.2,.9,.3,1), box-shadow 320ms ease;
+  transform-origin: center;
+}
+.subtle-zoom:hover,
+.subtle-zoom:focus {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 18px 40px rgba(16,24,40,0.08);
+}
+
+/* gentle float (for banner) */
+.banner-float {
+  will-change: transform;
+}
+
+/* small fade-in utility if you want to trigger with CSS only */
+.fade-in {
+  animation: fadeInUp .8s ease both;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* tiny accessible focus state for the subtle-zoom items */
+.subtle-zoom:focus {
+  outline: 3px solid rgba(66,153,225,0.12);
+  outline-offset: 3px;
+}
+
+/* Optional: reduce motion preference respect */
+@media (prefers-reduced-motion: reduce) {
+  .subtle-zoom,
+  .banner-float,
+  .animate-fade-up {
+    transition: none !important;
+    animation: none !important;
+  }
 }
 
 
